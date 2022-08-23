@@ -1,0 +1,44 @@
+body{
+
+	padding: 40px;
+}
+h4{
+	margin-left : 50px;
+	text-decoration: underline;
+}
+
+.media{
+	text-align: center;
+	margin: 50px;
+}
+.table,.span{
+	width: 80%;
+	height: 20px;
+	color: red;
+	border: solid red 1px;
+	margin-top: 60px;
+
+	justify-content: center;
+}
+.media .table{
+
+	
+}
+
+th,td{
+	color: black;
+	border: solid black 2px;
+}
+table{
+	margin-top: 30px;
+}
+
+img{
+	
+	width: 500px;
+	height: auto;
+	border: solid red 5px;
+}
+tfoot{
+	backface-visibility: hidden;
+}
