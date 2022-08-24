@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 20,
+  'wght' 100,
+  'GRAD' 70,
+  'opsz' 108
+}
+header{
+	margin-top: auto;
+	width: 100%;
+	height: 80px;
+	background-color: black;
+	color: white;
+}
+main{
+	background-image: url(./168069577-2f570d08-61d3-49d8-b7dd-c4b9192aaf68.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height:10000px ;
+	position: relative;
+	bottom: 22px;
+	padding: 60px;
+	
+}
+#text > p {
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+}
+    
+	
+}
+h1{
+	font-family: 'Roboto', sans-serif;
+	font-size: 110px;
+}
+
+
+
+#content{
+
+	position: relative;
+	top: 290px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+} 
+
+
+li {
+  float: right;
+}
+
+
+li a {
+  display: block;
+   text-align: center;
+  color: white;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-family:'Roboto', sans-serif ;
+    font-size: 25px;
+}
+
+li a:hover {
+  background-color: #555;
+}
+/*medium devices */
+@media all and (min-width: 760px) {
+  h1{
+    font-size: 25px;
+  }
+  header{
+  background-color: lightgreen;
+  color: black;
+}
+
+}
+
+/*Small devices */
+@media all and (min-width: 600px) {
+ h1{
+    font-size: 35px;
+
+  }
+header{
+  background-color: yellow;
+  color: black;
+}
+
+}
+
+/*large devices */
+
+@media all and (min-width: 960px) {
+  header{
+  background-color: red;
+  color: white;
+}
+
+h1{
+  position: relative;
+  z-index: 100;
+  position: relative;
+  top: 290px;
+
+}
+
+
+}
+
+/*Extra large devices */
+@media all and (min-width: 1200px) {
+  header{
+  background-color: black;
+  color: white;
+}
+}
+

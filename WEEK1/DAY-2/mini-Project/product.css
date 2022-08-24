@@ -31,13 +31,14 @@ body{
 
 .row{
 
-	display: flex;
+	
 	margin: auto;
 
 }
 
 .col{
 
+    display: inline-block;
 	width: 22%;
 	height: 400px;
 	margin: 10px;
