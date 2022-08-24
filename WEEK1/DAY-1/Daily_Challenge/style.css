@@ -28,13 +28,11 @@ main{
 	padding: 60px;
 	
 }
-
-#content #text{
-	width: 400px;
-	height: 100;
-	overflow: hidden;
-	
-	
+#text > p {
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+}
     
 	
 }
