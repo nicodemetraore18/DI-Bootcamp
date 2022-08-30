@@ -52,7 +52,7 @@ Finally, console.log the myWatchedSeries array, to see all the modifications you
 	    	  myWatchedSeries.push("Avengers");
 	    	  myWatchedSeries.unshift("Dreams");
 	    	  myWatchedSeries.splice(1,1);
-	    	  console.log(myWatchedSeries[1].substring(0,3));
+	    	  console.log(myWatchedSeries[1].substring(2,3));
 	    	  console.log(myWatchedSeries) 
 	      			  
 
