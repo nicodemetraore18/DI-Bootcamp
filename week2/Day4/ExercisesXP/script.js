@@ -132,32 +132,79 @@ console.log( changeEnough(0.75, [0,0,20,5]) );
 
 
 //Exercise 6
-
-//1
+//1____________________________________________________
 function hotelCost(){
 
-let numNight=prompt("Enter the number of nights you would stay in the hotel");
-while(numNight == "" || !(numNight >0) || (numNight > 365)){
+let numNight= +prompt("Enter the number of nights you would stay in the hotel",0);
+while(isNaN(numNight) || numNight == "" || numNight>365){
+	
 	//on pourrait utilise NaN dans la comparaison ex 
-	numNight=prompt("Enter the number of nights you would stay in the hotel");
-
+	numNight= +prompt("Enter the number of nights you would stay in the hotel",0);
+    
 }
-let total = Number(numNight)*140
-alert("The total price is: " +total+ "$")
+let total =numNight*140;
+return total;
 }
-//hotelCost();
+ 
 
-//2
-console.log(Number("10") == NaN )
-/*
+
+
+//2___________________________________________________
+
+function isLetter(str) {
+  return  str.match(/[a-z]/i);
+}
+
 function planeRideCost(){
 
 let destination=prompt("Enter the destination you wish reach");
-while(destination == "" ){
+while(destination == "" || !isLetter(destination) ){
 destination=prompt("Enter the destination you wish reach");
 }
-let pr = Number(numNight)*140
-alert("The  price is: " +price+ "$")
+
+if(destination=="London"){
+var price=183;
+}else if(destination=="Paris"){
+	 price=220;
+
+}else{
+	price=300
 }
-hotelCost();
-*/
+return price;
+}
+
+
+
+
+
+//3_____________________________________________________
+
+function rentalCarCost (){
+
+	let numDaysCar= +prompt("Enter the number of day you wish rent the car",0);
+    while(numDaysCar == "" || isNaN(numDaysCar )|| numDaysCar > 365 || numDaysCar<0){
+    		 numDaysCar= +prompt("Enter the number of day you wish rent the car");
+
+    }
+    if (numDaysCar < 10) {
+    	var rentCost=numDaysCar*40;
+    }else{
+    rentCost=(numDaysCar*40)-((numDaysCar*40)*5/100)
+    }
+    
+    return rentCost;
+
+   
+}
+
+
+
+//4_____________________________________________________
+
+function totalVacationCost(){
+	
+	console.log("The car cost : $"+ rentalCarCost()+" \nThe hotel cost : $"+ hotelCost()+"\nThe plane tickets cost : $"+planeRideCost());
+
+}
+
+totalVacationCost();
