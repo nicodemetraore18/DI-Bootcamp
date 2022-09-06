@@ -16,7 +16,7 @@ function playTheGame(){
 
    {
 
-       let number= +prompt("Enter a number between 0 and 10")
+       let number= prompt("Enter a number between 0 and 10")
        if(isNaN(number) || number==""){
        alert('Sorry Not a number, Goodbye ')
        playTheGame();
