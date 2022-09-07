@@ -54,7 +54,7 @@ function isDivisible() {
 isDivisible();
 
 
-//Exercise4
+//Exercise4--------------------------------------------------------------------------------------
 //1
 let stock = { 
     "banana": 6, 
@@ -71,6 +71,7 @@ let prices = {
     "orange": 1.5,
     "blueberry":10
 } 
+
 //2
 let shoppingList=["banana","orange","apple"]
 console.log(stock["banana"]);
@@ -106,7 +107,7 @@ myBill();
 
 
 
-// Exercise 5
+// Exercise 5------------------------------------------------------------------------------------------
 
 let change = [0.25, 0.10, 0.05, 0.01];
 
@@ -135,11 +136,11 @@ console.log( changeEnough(0.75, [0,0,20,5]) );
 //1____________________________________________________
 function hotelCost(){
 
-let numNight= +prompt("Enter the number of nights you would stay in the hotel",0);
+let numNight= prompt("Enter the number of nights you would stay in the hotel",0);
 while(isNaN(numNight) || numNight == "" || numNight>365){
 	
 	//on pourrait utilise NaN dans la comparaison ex 
-	numNight= +prompt("Enter the number of nights you would stay in the hotel",0);
+	numNight= prompt("Enter the number of nights you would stay in the hotel",0);
     
 }
 let total =numNight*140;
@@ -181,9 +182,9 @@ return price;
 
 function rentalCarCost (){
 
-	let numDaysCar= +prompt("Enter the number of day you wish rent the car",0);
+	let numDaysCar= prompt("Enter the number of day you wish rent the car",0);
     while(numDaysCar == "" || isNaN(numDaysCar )|| numDaysCar > 365 || numDaysCar<0){
-    		 numDaysCar= +prompt("Enter the number of day you wish rent the car");
+    		 numDaysCar= prompt("Enter the number of day you wish rent the car");
 
     }
     if (numDaysCar < 10) {
@@ -203,7 +204,7 @@ function rentalCarCost (){
 
 function totalVacationCost(){
 	
-	console.log("The car cost : $"+ rentalCarCost()+" \nThe hotel cost : $"+ hotelCost()+"\nThe plane tickets cost : $"+planeRideCost());
+	alert("The car cost : $"+ rentalCarCost()+" \nThe hotel cost : $"+ hotelCost()+"\nThe plane tickets cost : $"+planeRideCost());
 
 }
 
