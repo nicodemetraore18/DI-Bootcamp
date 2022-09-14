@@ -54,7 +54,9 @@ else:
 
 #Exercise9---------------------------
 What_is_your_height=input("Enter your height in inches Dear friend?");
-if(What_is_your_height7>145):
+if(What_is_your_height>145):
 	print("You are tall enougth to ride");
 else:
 	print("you need to grow some more to ride");
+
+
