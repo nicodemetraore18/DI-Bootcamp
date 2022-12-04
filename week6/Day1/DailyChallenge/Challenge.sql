@@ -8,5 +8,5 @@ CREATE TABLE actors(
 
 SELECT COUNT(actor_id) FROM actors;
 INSERT INTO actors(first_name,last_name,age,number_oscars)
-VALUES(" "," " ,"" ," ");
+VALUES(' ',' ' ,' ' ,' ');
 -- Outcome will expcet errors cause we are trying to affect  blank field to not nulls columns

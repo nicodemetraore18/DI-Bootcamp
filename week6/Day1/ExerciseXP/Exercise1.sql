@@ -20,23 +20,23 @@ CONSTRAINT customers_const PRIMARY KEY(customers_id)
 
 --Inserting into items table
 INSERT INTO items (item_name,item_price)
-VALUES ("Small Desk",100);
+VALUES ('Small Desk',100);
 INSERT INTO items (item_name,item_price)
-VALUES ("Large Desk",300);
+VALUES ('Large Desk',300);
 INSERT INTO items (item_name,item_price)
-VALUES ("Fan",80);
+VALUES ('Fan',80);
 
 --Inserting into customers table
 INSERT INTO customers (first_name,last_name)
-VALUES ("Greg","Jones");
+VALUES ('Greg','Jones');
 INSERT INTO customers (first_name,last_name)
-VALUES ("Sandra","Jones");
+VALUES ('Sandra','Jones');
 INSERT INTO customers (first_name,last_name)
-VALUES ("Scott","Scott");
+VALUES ('Scott','Scott');
 INSERT INTO customers (first_name,last_name)
-VALUES ("Trevor","Green");
+VALUES ('Trevor','Green');
 INSERT INTO customers (first_name,last_name)
-VALUES ("Melanie","Johnson");
+VALUES ('Melanie','Johnson');
 
 --Fetching All the items.
 SELECT * from items;
@@ -48,12 +48,12 @@ SELECT *from items WHERE item_price>80;
 SELECT *from items WHERE item_price<300;
 
 --Fetching All customers whose last name is ‘Smith’ (What will be your outcome?).
-SELECT *from customers WHERE last_name=="Smith";
+SELECT *from customers WHERE last_name='Smith';
 --Outcome None
 
 
 --Fetching All customers whose last name is ‘Jones’.
-SELECT *from customers WHERE last_name=="Jones";
+SELECT *from customers WHERE last_name='Jones';
 
 --Fetching All customers whose  first name  is not Scott.
-SELECT *from customers WHERE first_name !="Scott";
+SELECT *from customers WHERE first_name !='Scott;
