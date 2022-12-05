@@ -74,13 +74,13 @@ We will work on the public database that we created yesterday.
  */
 
 --1
-SELECT * FROM item ORDER BY item_price DESC;
+SELECT * FROM items ORDER BY item_price DESC;
 
 --2 
-SELECT * FROM item WHERE item_price>=80 ORDER BY item_price DESC;
+SELECT * FROM items WHERE item_price>=80 ORDER BY item_price DESC;
 
 --3
-SELECT TOP 3 first_name,last_name FROM customers ORDER BY first_name ASC;
+SELECT first_name,last_name FROM customers ORDER BY first_name ASC LIMIT 3;
 
 --4
 SELECT last_name FROM customers ORDER BY last_name DESC;
