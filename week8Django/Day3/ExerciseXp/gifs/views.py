@@ -41,11 +41,11 @@ def Addnewgif(request):
                     'category ': form_category
                 }
             print(context['formInfo'])
-            return render(request, 'Add_gif.html', context)
+            return render(request, 'add_new.html', context)
         else:
             print("---ERRORS---", form.errors)
             context['form'] = form
-            return render(request, 'Add_gif.html', context)
+            return render(request, 'add-new.html', context)
 
     else:
         # GET, generate blank form
@@ -87,7 +87,7 @@ def categorys(request, id):
     context = {
         'id': id,
         'page_title': "Category",
-        'gifs': Gif.objects.filter(id=id)
+        'gifs': Gif.objects.filter(categories.id=id)
     }
     return render(request, 'category.html', context)
 
