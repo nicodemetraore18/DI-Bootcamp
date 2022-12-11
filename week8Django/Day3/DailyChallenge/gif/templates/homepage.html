@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{%block title%}
+{{page_title}}
+{% endblock title%}
+
+{%block content%}
+<a href="{% url 'add_new_gif' %}">Add_new_gif</a>
+<a href="{% url 'add_new_category' %}">Add_new_Category</a>
+{% for gif in gifs %}
+
+<h2>{{gif.title}}</h2>
+<img src="{{gif.URL}}">
+<form action="{% url 'like' %} " method="post">
+    {% csrf_token %}
+    <input type="hidden" name="gif_id" value="{{gif.id}}">
+<button style="background-color: green" type="submit">Like</button>
+</form>
+<form action="{% url 'unlike' %} " method="post">
+    {% csrf_token %}
+    <input type="hidden" name="gif_id" value="{{gif.id}}">
+<button style="background-color: red" type="submit">Unlike</button>
+</form>
+<strong> {{gif.likes}} likes</strong>
+
+{% endfor %}
+{% endblock content%}
