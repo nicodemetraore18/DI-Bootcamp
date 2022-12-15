@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+
+    <h1>LISTE OF RENTALS</h1>
+
+<table border="1">
+    <thead>
+    <td>id</td>
+    <td>rental date</td>
+    <td> Rental details </td>
+    </thead>
+
+
+     {% for x in rental %}
+    <a href="#">
+    <tr>
+    <td>{{x.pk}}</td>
+    <td>{{x.rental_date}}</td>
+        <td><input type="button" href=" {% url '' %}" class="btn btn-success" value="details"></td>
+    </tr>
+    </a>
+
+   {% endfor %}
+
+
+</table>
+
+ {% endblock content %}

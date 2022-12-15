@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+
+    <h1> Details of RENTAL N° {{rental.pk}}</h1>
+
+<table border="1">
+    <thead>
+    <td>id</td>
+    <td>rental date</td>
+    <td>  customer </td>
+    <td>  vehicle </td>
+    </thead>
+
+
+     {% for x in rental %}
+    <a href="#">
+    <tr>
+    <td>{{rental.pk}}</td>
+    <td>{{rental.rental_date}}</td>
+        <td>{{rental.return_date}}</td>
+    <td><a href="#"> {{rental.customer}} </a> </td>
+        <td><a href="#" >{{rental.vehicle}}</a></td>
+
+        <td><input type="button" href=" {% url 'rental/{{x.pk}}' %}" class="btn btn-success" value="Return Vehicle"></td>
+    </tr>
+    </a>
+
+   {% endfor %}
+
+
+</table>
+
+ {% endblock content %}
