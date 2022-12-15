@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="addTodo/" method="POST" >
+  {% csrf_token %}
+    <table>
+        {{form}}
+    </table>
+    <input type="submit" value="valider">
+</form>
+{% for task in todo %}
+
+<div class="card border-dark mb-3">
+  <div class="card-header"><b>{{task.category}}</b>  <small>created at {{task.date_creation}}--deadline_date:{{task.deadline_date}}</small></div>
+  <div class="card-body text-dark">
+    <h5 class="card-title">
+      {% if task.title != "" %}
+        {{task.title}}
+      {% endif  %}
+    </h5>
+    <p class="card-text">{{task.details}}</p>
+
+    <div class="input-group mb-3">
+      <!--
+        <form action="/edit/{{post.id}}/" method="POST">
+        {% csrf_token %}
+        <a href="#" class="btn btn-info">Edit</a>
+      </form>
+      -->
+
+      <form action="{% url 'done' %} " method="POST">
+        {% csrf_token %}
+         <input type="hidden" name="task_id" value="{{task.id}}">
+        {% if task.has_been_done == True %}
+  <button type="submit" name="done" class="btn btn-success " value="done">
+      {{task.has_been_done}}</button>
+{% else %}
+   <button type="submit" name="done" class="btn btn-danger" value="done">
+          {{task.has_been_done}}</button>
+{% endif %}
+
+      </form>
+    </div>
+  </div>
+
+</div>
+
+{% endfor %}
+{% endblock %}
+
+
+{% block todo_objects %}
+
+{% endblock %}
